@@ -1,0 +1,17 @@
+C:\Ather\RnD\AlgonDS\TestAlognDS\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Ather\RnD\AlgonDS\TestAlognDS\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Ather\RnD\AlgonDS\TestAlognDS\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Ather\RnD\AlgonDS\TestAlognDS\bin\Debug\netcoreapp2.1\TestAlognDS.deps.json
+C:\Ather\RnD\AlgonDS\TestAlognDS\bin\Debug\netcoreapp2.1\TestAlognDS.runtimeconfig.json
+C:\Ather\RnD\AlgonDS\TestAlognDS\bin\Debug\netcoreapp2.1\TestAlognDS.runtimeconfig.dev.json
+C:\Ather\RnD\AlgonDS\TestAlognDS\bin\Debug\netcoreapp2.1\TestAlognDS.dll
+C:\Ather\RnD\AlgonDS\TestAlognDS\bin\Debug\netcoreapp2.1\TestAlognDS.pdb
+C:\Ather\RnD\AlgonDS\TestAlognDS\bin\Debug\netcoreapp2.1\AlgonDS.dll
+C:\Ather\RnD\AlgonDS\TestAlognDS\bin\Debug\netcoreapp2.1\AlgonDS.pdb
+C:\Ather\RnD\AlgonDS\TestAlognDS\obj\Debug\netcoreapp2.1\TestAlognDS.csprojAssemblyReference.cache
+C:\Ather\RnD\AlgonDS\TestAlognDS\obj\Debug\netcoreapp2.1\TestAlognDS.csproj.CoreCompileInputs.cache
+C:\Ather\RnD\AlgonDS\TestAlognDS\obj\Debug\netcoreapp2.1\TestAlognDS.AssemblyInfoInputs.cache
+C:\Ather\RnD\AlgonDS\TestAlognDS\obj\Debug\netcoreapp2.1\TestAlognDS.AssemblyInfo.cs
+C:\Ather\RnD\AlgonDS\TestAlognDS\obj\Debug\netcoreapp2.1\TestAlognDS.csproj.CopyComplete
+C:\Ather\RnD\AlgonDS\TestAlognDS\obj\Debug\netcoreapp2.1\TestAlognDS.dll
+C:\Ather\RnD\AlgonDS\TestAlognDS\obj\Debug\netcoreapp2.1\TestAlognDS.pdb
