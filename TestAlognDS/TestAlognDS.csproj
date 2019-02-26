@@ -19,7 +19,6 @@
   <ItemGroup>
     <Folder Include="Advance\" />
     <Folder Include="Search\" />
-    <Folder Include="Sorting\" />
   </ItemGroup>
 
 </Project>
