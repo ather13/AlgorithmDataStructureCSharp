@@ -7,7 +7,6 @@
 
   <ItemGroup>
     <Folder Include="Advance\" />
-    <Folder Include="Search\" />
   </ItemGroup>
 
 </Project>

@@ -1,6 +1,14 @@
-﻿using System;
+﻿/// <summary>
+/// Problem Statement :  
+/// Merge sort is one of the most efficient sorting algorithms. 
+/// It works on the principle of Divide and Conquer. 
+/// Merge sort repeatedly breaks down a list into several sublists until each 
+/// sublist consists of a single element and merging those sublists in a manner 
+/// that results into a sorted list.
+/// Examples :  
+/// </summary>
+
 using System.Collections.Generic;
-using System.Text;
 using System.Linq;
 
 namespace AlgonDS
@@ -12,17 +20,11 @@ namespace AlgonDS
             if (unsorted.Count() <= 1) return unsorted;
 
             int count = unsorted.Count() / 2;
-
-            //Console.WriteLine("...");
-            //Console.WriteLine(count);
-            //Console.WriteLine(unsorted.Count());
-
+            
             List<int> left = unsorted.GetRange(0, count);
-            //left.ForEach((i) => Console.WriteLine(i));
 
             List<int> right = unsorted.GetRange(count, unsorted.Count() - count);
-            //right.ForEach((i) => Console.WriteLine(i));
-
+            
             left = GetSortedList(left);
             right = GetSortedList(right);
 
@@ -59,10 +61,6 @@ namespace AlgonDS
                     right.Remove(right.First());
                 }
             }
-
-            //Console.WriteLine("...");
-            //result.ForEach((i) => Console.WriteLine(i));
-            //Console.WriteLine("...");
             return result;
         }
     }
