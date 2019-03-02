@@ -4,7 +4,12 @@
 2. Other common problems solved
 3. Multiple method to solve the same problem
 4. Unit Testing
-5. Some of the files are blank those files are TODO
+
+# TODO
+1. Some more algorthms are going to add
+2. Some of the files are blank, code is in WIP for those 
+3. Comments on methods needs to be added
+4. More comments need to be added
 
 # Development Environment
 1. Visual Studio : 2017
