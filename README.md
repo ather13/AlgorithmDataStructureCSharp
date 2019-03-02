@@ -1,9 +1,10 @@
-# About "AlgorithmDataStructureCSharp"
+# About "AlgorithmDataStructureCSharp" code base
 
-1. Alogorithms and Data Structures 
+1. Algorithms and Data Structures 
 2. Other common problems solved
-3. Unit Testing
-
+3. Multiple method to solve the same problem
+4. Unit Testing
+5. Some of the files are blank those files are TODO
 
 # Development Environment
 1. Visual Studio : 2017
