@@ -16,8 +16,4 @@
     <ProjectReference Include="..\AlgonDS\AlgonDS.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Advance\" />
-  </ItemGroup>
-
 </Project>

@@ -4,15 +4,15 @@ using System.Text;
 
 namespace AlgonDS
 {    
-    public class Node
+    public class TreeNode
     {
-        public Node Left { get; set; }
-        public Node Right { get; set; }
+        public TreeNode Left { get; set; }
+        public TreeNode Right { get; set; }
         public string Value { get; set; }
 
-        public Node Insert(string value)
+        public TreeNode Insert(string value)
         {
-            return new Node();
+            return new TreeNode();
         }
 
         public bool Find(string value)
