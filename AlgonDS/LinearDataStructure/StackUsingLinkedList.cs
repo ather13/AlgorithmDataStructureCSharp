@@ -27,14 +27,8 @@ namespace AlgonDS
             return data;
         }
 
-        public int? Peek()
-        {
-            return top == null ? (int?)null : top.Data;
-        }
-        public bool IsEmpty()
-        {
-            return top == null;
-        }
+        public int? Peek() => top == null ? (int?)null : top.Data;
+        public bool IsEmpty() => top == null;
 
         //full is not applicable with linked list
         //if we want to support then add one property to limit 

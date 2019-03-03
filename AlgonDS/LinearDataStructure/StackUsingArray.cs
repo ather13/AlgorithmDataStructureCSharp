@@ -1,6 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿/// <summary>
+/// Problem Statement :  Stacks only allow data to be accessed in a predetermined order.
+///             It supports LIFO (Last In First Out)
+///             Push -> to insert data
+///             Pop -> to remove data    
+/// Examples : 
+/// </summary>
 
 namespace AlgonDS
 {
@@ -44,16 +48,10 @@ namespace AlgonDS
 
             return (int?)null;
         }
-        public bool IsEmpty()
-        {
-            return currentSize == 0;
-        }
+        public bool IsEmpty() => currentSize == 0;
 
-        public bool IsFull()
-        {
-            return maxSize == currentSize;
-        }
+        public bool IsFull() => maxSize == currentSize;
 
-        public int Count() { return currentSize; }
+        public int Count() => currentSize;
     }
 }
