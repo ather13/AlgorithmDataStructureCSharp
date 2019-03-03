@@ -8,16 +8,11 @@ namespace AlgonDS
     {
         public TreeNode Left { get; set; }
         public TreeNode Right { get; set; }
-        public string Value { get; set; }
+        public int Data { get; set; }
 
-        public TreeNode Insert(string value)
+        public TreeNode(int data)
         {
-            return new TreeNode();
-        }
-
-        public bool Find(string value)
-        {
-            return true;
+            this.Data = data;
         }
     }
 }
