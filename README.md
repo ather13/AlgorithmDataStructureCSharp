@@ -17,7 +17,4 @@
 
 # Performance 
 
-# Referrences
-https://www.tutorialspoint.com/data_structures_algorithms/
-https://docs.microsoft.com/en-us/previous-versions/ms379570%28v%3dvs.80%29
-https://www.irfanbaqui.com/coding-interview-prep/
+
