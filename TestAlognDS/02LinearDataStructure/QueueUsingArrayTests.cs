@@ -1,7 +1,7 @@
 ﻿using AlgonDS.LinearDataStructure;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace TestAlognDS.LinearDataStructure
+namespace TestAlgonDS
 {
     [TestClass]
     public class QueueUsingArrayTests

@@ -2,7 +2,7 @@
 using AlgonDS;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace TestAlognDS
+namespace TestAlgonDS
 {
     [TestClass]
     public class NumberOfVowelsTests

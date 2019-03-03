@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace TestAlognDS
+namespace TestAlgonDS
 {
     [TestClass]
     public class StepsHashTests
