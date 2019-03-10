@@ -10,10 +10,45 @@
 /// </summary>
 using System.Collections.Generic;
 
-namespace AlognDS
+namespace AlgonDS
 {
     public class QuickSort
-    {   
+    {
+
+        public void GetSortedArray(int[] unsorted, int begin, int end)
+        {
+            int pivot = unsorted[(begin + (end - begin) / 2)];
+            int left = begin;
+            int right = end;
+            while (left <= right)
+            {
+                while (unsorted[left] < pivot)
+                {
+                    left++;
+                }
+                while (unsorted[right] > pivot)
+                {
+                    right--;
+                }
+                if (left <= right)
+                {
+                    int temp = unsorted[left];
+                    unsorted[left] = unsorted[right];
+                    unsorted[right] = temp;
+                    left++;
+                    right--;
+                }
+            }
+            if (begin < right)
+            {
+                GetSortedArray(unsorted, begin, right);
+            }
+            if (end > left)
+            {
+                GetSortedArray(unsorted, left, end);
+            }
+        }
+
         public void GetSortedList(List<int> unsorted, int begin, int end)
         {
             int pivot = unsorted[(begin + (end - begin) / 2)];
