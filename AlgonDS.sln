@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.329
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlgonDS", "AlgonDS\AlgonDS.csproj", "{277CD2F1-39F9-4AD2-ABDA-1B68F5190692}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AlgonDS", "AlgonDS\AlgonDS.csproj", "{277CD2F1-39F9-4AD2-ABDA-1B68F5190692}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestAlognDS", "TestAlognDS\TestAlognDS.csproj", "{DCFA8758-2152-4225-988D-9E4D1FE47CB0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestAlgonDS", "TestAlognDS\TestAlgonDS.csproj", "{DCFA8758-2152-4225-988D-9E4D1FE47CB0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
