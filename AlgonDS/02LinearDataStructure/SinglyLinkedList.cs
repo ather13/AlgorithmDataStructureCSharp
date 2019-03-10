@@ -11,7 +11,7 @@ namespace AlgonDS
 {
     public class SinglyLinkedList { 
 
-        Node head;
+        protected Node head;
 
         public SinglyLinkedList() { }
 
@@ -94,5 +94,19 @@ namespace AlgonDS
 
             return count;
         }
+
+        public int GetData(int position)
+        {
+            int count = 0;
+            var node = head;
+            while (node !=null && position != count)
+            {
+                count++;
+                node = node.Next;
+            }
+
+            return node == null ? -1 : node.Data;
+        }
+
     }    
 }
