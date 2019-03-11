@@ -1,6 +1,7 @@
 ﻿/// <summary>
-/// GCD (Greatest common divisor) or HCF (Highest common factor) of two or more numbers (integers) is the largest positive integer 
-/// that divides those numbers without a remainder.
+/// GCD (Greatest common divisor) or HCF (Highest common factor) of two or more numbers 
+/// (integers) is the largest positive integer that divides those numbers 
+/// without a remainder.
 /// Example: GCD (8,12)=4 Because 4 is highest number which devides both 8 and 12 completely i.e. without remainder.
 /// GCD(50, 25, 100)= 25 Because 25 is highest number which devides all three numbers.
 /// </summary>

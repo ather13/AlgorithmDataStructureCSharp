@@ -9,9 +9,11 @@ namespace TestAlgonDS
         [TestMethod]
         public void GCDTwoNumbersSuccess()
         {
-            var actual = (new GCDRelated()).GCDTwoNumbes(240,45);
+            var actual = (new GCDRelated()).GCDTwoNumbes(10,15);
 
-            Assert.AreEqual(15, actual); 
+            //10=5X2
+            //15=5X3            
+            Assert.AreEqual(5, actual); 
         }
 
         [TestMethod]
