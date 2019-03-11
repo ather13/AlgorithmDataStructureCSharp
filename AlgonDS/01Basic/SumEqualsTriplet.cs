@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 
 /// <summary>
 /// Given an array and a value, find if there is a triplet in array whose sum is equal 
@@ -12,7 +13,27 @@ namespace AlgonDS
 {
     public class SumEqualsTriplet
     {
-        public bool FindSumWithSorting(int[] arr, int sumValue)
+
+        public bool FindSumHashSet(int[] arr, int sumValue)
+        {
+            for (int i = 0; i < arr.Length - 2; i++)
+            {
+                HashSet<int> s = new HashSet<int>();
+                int curr_sum = sumValue - arr[i];
+                for (int j = i+1; j < arr.Length; j++)
+                {
+                    if (s.Contains(curr_sum - arr[j]) &&
+                         curr_sum - arr[j] != s.ToArray()[s.Count-1])
+                    {
+                        return true;
+                    }
+                    s.Add(arr[j]);
+                }
+            }
+            return false;
+        }
+
+            public bool FindSumWithSorting(int[] arr, int sumValue)
         {
             new QuickSort().GetSortedArray(arr, 0, arr.Length-1);
 

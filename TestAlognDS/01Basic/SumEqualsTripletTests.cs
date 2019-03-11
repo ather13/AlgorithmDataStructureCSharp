@@ -7,7 +7,7 @@ namespace TestAlgonDS
     public class SumEqualsTripletTests
     {
         [TestMethod]
-        public void SumEqualsTripletSuccess()
+        public void FindSumSuccess()
         {
             var actual = (new SumEqualsTriplet()).FindSum(new int[] { 12, 3, 4, 1, 6, 9 }, 24);
 
@@ -23,7 +23,15 @@ namespace TestAlgonDS
         }
 
         [TestMethod]
-        public void SumEqualsTripletFailure()
+        public void FindSumHashSetSuccess()
+        {
+            var actual = (new SumEqualsTriplet()).FindSumHashSet(new int[] { 12, 3, 4, 1, 6, 9 }, 24);
+
+            Assert.IsTrue(actual);
+        }
+
+        [TestMethod]
+        public void FindSumFailure()
         {
             var actual = (new SumEqualsTriplet()).FindSum(new int[] { 12, 3, 4, 1, 6, 9 }, 100);
 
