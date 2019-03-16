@@ -19,5 +19,13 @@ namespace TestAlgonDS
             //5X3X2=30
             Assert.AreEqual(30, actual);
         }
+
+        [TestMethod]
+        public void LCMForNNumberUsingTable()
+        {
+            var actual = new LCMRelated().LCMForNNumberUsingTable(new int[] { 1, 2, 3, 4, 28 });
+                        
+            Assert.AreEqual(84, actual);
+        }
     }
 }
