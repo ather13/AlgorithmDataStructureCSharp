@@ -14,6 +14,7 @@
 # Development Environment
 1. Visual Studio : 2017
 2. .Net Core 2.1
+3. C# 
 
 # Performance 
 
