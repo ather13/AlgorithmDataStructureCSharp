@@ -4,12 +4,12 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace TestAlgonDS
 {
     [TestClass]
-    public class SinglyLinkedListQuestionsTests
+    public class SumMergedOtherHalfTests
     {
         [TestMethod]
         public void VerifySumMergeOtherHalf()
         {
-            var actual = new SinglyLinkedListQuestions();
+            var actual = new SumMergedOtherHalf();
             actual.Add(2);
             actual.Add(3);
             actual.Add(4);

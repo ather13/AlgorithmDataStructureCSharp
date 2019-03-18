@@ -2,7 +2,7 @@
 
 namespace AlgonDS
 {
-    public class SinglyLinkedListQuestions : SinglyLinkedList
+    public class SumMergedOtherHalf : SinglyLinkedList
     {
         /*
          Given a Singly Linked list, Update the second half of the list such that 
