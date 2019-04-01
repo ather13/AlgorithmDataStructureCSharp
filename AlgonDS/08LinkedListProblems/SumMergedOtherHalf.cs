@@ -16,7 +16,8 @@ namespace AlgonDS
 
             var slow = head;
             var fast = head;
-            var mid = Count() / 2 + Count() % 2;
+            var count = Count();
+            var mid = count / 2 + count % 2;
             var counter = 1;
             var stack =new Stack<int>();
             
@@ -24,13 +25,9 @@ namespace AlgonDS
             while (fast != null && fast.Next != null)
             {
                 stack.Push(slow.Data);
-                fast = fast.Next;
+                fast = fast.Next.Next;
                 slow = slow.Next;
                 counter++;
-                if (fast != null)
-                {
-                    fast = fast.Next;
-                }
             }
 
             //mainly for condition when records are odd
