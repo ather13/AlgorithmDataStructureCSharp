@@ -11,7 +11,7 @@ namespace TestAlgonDS
         [TestMethod]
         public void Search()
         {
-            var graph = new Graph();
+            var graph = new Graph<int>();
             graph.AddVertex(1);
             graph.AddVertex(2);
             graph.AddEdges(1, 2);
@@ -24,7 +24,7 @@ namespace TestAlgonDS
         [TestMethod]
         public void SearchRoot()
         {
-            var graph = new Graph();
+            var graph = new Graph<int>();
             graph.AddVertex(1);
             graph.AddVertex(2);
             graph.AddEdges(1, 2);
@@ -37,7 +37,7 @@ namespace TestAlgonDS
         [TestMethod]
         public void SearchNotExsists()
         {
-            var graph = new Graph();
+            var graph = new Graph<int>();
             graph.AddVertex(1);
             graph.AddVertex(2);
             graph.AddEdges(1, 2);
@@ -50,7 +50,7 @@ namespace TestAlgonDS
         [TestMethod]
         public void SearchRootNotExsists()
         {
-            var graph = new Graph();
+            var graph = new Graph<int>();
             graph.AddVertex(1);
             graph.AddVertex(2);
             graph.AddEdges(1, 2);
@@ -63,7 +63,7 @@ namespace TestAlgonDS
         [TestMethod]
         public void LargeSearch()
         {
-            var graph = new Graph();
+            var graph = new Graph<int>();
             graph.AddVertex(new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 });
             graph.AddEdges(new List<Tuple<int, int>>(){
             new Tuple<int,int>(1,2),new Tuple<int,int>(1,3),new Tuple<int,int>(2,4)

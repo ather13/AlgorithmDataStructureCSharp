@@ -11,17 +11,17 @@ using System.Collections.Generic;
 
 namespace AlgonDS
 {
-    public class Graph
+    public class Graph<T>
     {
-        public Dictionary<int, HashSet<int>>
-        Neighbours = new Dictionary<int, HashSet<int>>();
+        public Dictionary<T, HashSet<T>>
+        Neighbours = new Dictionary<T, HashSet<T>>();
 
-        public void AddVertex(int data)
+        public void AddVertex(T data)
         {
-            Neighbours.Add(data, new HashSet<int>());
+            Neighbours.Add(data, new HashSet<T>());
         }
 
-        public void AddVertex(int[] data)
+        public void AddVertex(T[] data)
         {
             foreach (var d in data)
             {
@@ -29,7 +29,7 @@ namespace AlgonDS
             }
         }
 
-        public void AddEdges(int v1, int v2)
+        public void AddEdges(T v1, T v2)
         {
             if (Neighbours.ContainsKey(v1) && Neighbours.ContainsKey(v2))
             {
@@ -38,7 +38,7 @@ namespace AlgonDS
             }
         }
 
-        public void AddEdges(IEnumerable<Tuple<int, int>> list)
+        public void AddEdges(IEnumerable<Tuple<T, T>> list)
         {
             foreach (var o in list)
             {

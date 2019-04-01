@@ -13,7 +13,7 @@ namespace AlgonDS
     {
         //here root is any starting point
         //since there is no root element in graph
-        public bool Search(Graph graph, int root, int searchValue)
+        public bool Search(Graph<int> graph, int root, int searchValue)
         {
             var visited = new List<int>();
             var stack = new Stack<int>();

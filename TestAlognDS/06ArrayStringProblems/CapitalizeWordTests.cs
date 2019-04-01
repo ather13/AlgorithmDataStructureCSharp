@@ -40,7 +40,7 @@ namespace TestAlgonDS
         [TestMethod]
         public void CheckSentenceMultipleSpaceSpecialChars()
         {
-            var expected = "Hello   This Wornderful $world !!";
+            var expected = "Hello   This Wornderful $World !!";
             var actual = (new CapitalizeWord()).CapitalizeMe("Hello   this wornderful $World !!");
 
             Assert.AreEqual(expected, actual, false);

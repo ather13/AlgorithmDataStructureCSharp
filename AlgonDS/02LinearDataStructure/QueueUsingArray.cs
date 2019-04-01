@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace AlgonDS.LinearDataStructure
 {
@@ -8,7 +6,8 @@ namespace AlgonDS.LinearDataStructure
 
         int[] queue;
         int maxSize = 0;
-        int currentSize = 0;
+        int rear = 0;
+        int front = 0;
 
         public QueueUsingArray(int size)
         {
@@ -24,17 +23,16 @@ namespace AlgonDS.LinearDataStructure
                 throw new Exception("queue is full");
             }
             
-            queue[currentSize] = data;
-            currentSize++;           
+            queue[rear] = data;
+            rear++;           
         }
 
         //retrieve and remove
         public int? Dequeue()
         {
             if (!IsEmpty())
-            {
-                currentSize--;
-                return queue[currentSize];
+            {                
+                return queue[front++];                
             }
             return (int?)null;
         }
@@ -44,17 +42,17 @@ namespace AlgonDS.LinearDataStructure
         {
             if (!IsEmpty())
             {
-                return queue[currentSize-1];
+                return queue[front];
             }
             return (int?)null;
         }
 
-        public bool IsEmpty() => currentSize == 0;
+        public bool IsEmpty() => rear == front;
 
         //number of elements
-        public bool IsFull() => currentSize == maxSize;        
+        public bool IsFull() => rear == maxSize;        
 
-        public int Count() => currentSize;
+        public int Count() => rear-front;
 
     }
 }

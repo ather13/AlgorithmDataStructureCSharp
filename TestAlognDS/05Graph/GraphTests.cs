@@ -12,7 +12,7 @@ namespace TestAlgonDS
         [TestMethod]
         public void VerifyVertices()
         {
-            var actual = new Graph();
+            var actual = new Graph<int>();
             actual.AddVertex(1);
             actual.AddVertex(2);
             actual.AddVertex(3);
@@ -25,7 +25,7 @@ namespace TestAlgonDS
         [TestMethod]
         public void VerifyEdges()
         {
-            var actual = new Graph();
+            var actual = new Graph<int>();
             actual.AddVertex(1);
             actual.AddVertex(2);
             actual.AddEdges(1,2);
@@ -37,7 +37,7 @@ namespace TestAlgonDS
         [TestMethod]
         public void VerifyVerticesNotExists()
         {
-            var actual = new Graph();
+            var actual = new Graph<int>();
             actual.AddVertex(1);
             actual.AddVertex(2);
             actual.AddVertex(3);
@@ -48,7 +48,7 @@ namespace TestAlgonDS
         [TestMethod]
         public void VerifyEdgesNotExsists()
         {
-            var actual = new Graph();
+            var actual = new Graph<int>();
             actual.AddVertex(1);
             actual.AddVertex(2);
             actual.AddEdges(1, 2);

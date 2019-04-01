@@ -19,7 +19,7 @@ namespace TestAlgonDS
 
             actual.SumMergeOtherHalf();
             
-            Assert.AreEqual(7, actual.GetData(0) + actual.GetData(4)); 
+            Assert.AreEqual(8,  actual.GetData(4)); 
         }
     }
 }
