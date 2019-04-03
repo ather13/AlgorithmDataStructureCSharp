@@ -18,6 +18,17 @@ namespace TestAlgonDS
         }
 
         [TestMethod]
+        public void CheckEvenWord()
+        {
+            var toBeReversed = "Hell";
+            var reversed = "lleH";
+            ReverseString reverseString = new ReverseString();
+            var actualResult = reverseString.ReverseMe(toBeReversed);
+
+            Assert.AreEqual(actualResult, reversed);
+        }
+
+        [TestMethod]
         public void CheckNull()
         {
             string toBeReversed = null;

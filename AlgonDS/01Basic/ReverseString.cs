@@ -14,7 +14,35 @@ namespace AlgonDS
 {
     public class ReverseString
     {
+
         public string ReverseMe(string toBeReversed)
+        {
+            Stopwatch sw = new Stopwatch();
+            sw.Start();
+            if (string.IsNullOrEmpty(toBeReversed)) return toBeReversed;
+
+            var arr = toBeReversed.ToCharArray();
+            int l = 0;
+            int r = toBeReversed.Length-1;
+            while (l<r)
+            {
+                var temp = arr[l];
+                arr[l] = arr[r];
+                arr[r] = temp;
+
+                l++;
+                r--;
+            }
+
+            var reversed = new string(arr);
+            
+            sw.Stop();
+            Console.WriteLine(sw.ElapsedMilliseconds);
+
+            return reversed;
+        }
+
+        public string ReverseMeOption4(string toBeReversed)
         {
             Stopwatch sw = new Stopwatch();
             sw.Start();
