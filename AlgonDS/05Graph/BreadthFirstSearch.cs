@@ -16,7 +16,7 @@ namespace AlgonDS
         public bool Search(Graph<int> graph, int root, int searchValue)
         {
             var visited = new List<int>();
-            var stack = new Queue<int>();
+            var queue = new Queue<int>();
 
             if (graph == null) return false;
 
@@ -24,11 +24,11 @@ namespace AlgonDS
 
             if (root == searchValue) return true;
 
-            stack.Enqueue(root);
+            queue.Enqueue(root);
 
-            while (stack.Count() > 0)
+            while (queue.Count() > 0)
             {
-                var vertex = stack.Dequeue();
+                var vertex = queue.Dequeue();
                 //Debug.WriteLine(vertex);
                 if (visited.Contains(vertex)) continue;
 
@@ -40,7 +40,7 @@ namespace AlgonDS
                 {
                     if (!visited.Contains(v))
                     {
-                        stack.Enqueue(v);
+                        queue.Enqueue(v);
                         // Debug.WriteLine(v);
                     }
                 }
