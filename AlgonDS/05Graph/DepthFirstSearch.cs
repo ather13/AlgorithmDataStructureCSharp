@@ -11,22 +11,28 @@ namespace AlgonDS
 {
     public class DepthFirstSearch
     {
-        //here root is any starting point
-        //since there is no root element in graph
+        /// <summary>
+        /// here root is any starting point
+        /// since there is no root element in graph like in tree
+        /// </summary>
+        /// <param name="graph"></param>
+        /// <param name="root"></param>
+        /// <param name="searchValue"></param>
+        /// <returns></returns>
         public bool Search(Graph<int> graph, int root, int searchValue)
         {
-            var visited = new List<int>();
+            var visited = new List<int>(); // this is only needed for bidirectional graph
             var stack = new Stack<int>();
 
             if (graph == null) return false;
 
-            if (!graph.Neighbours.ContainsKey(root)) return false;
+            if (!graph.Neighbors.ContainsKey(root)) return false;
 
             if (root == searchValue) return true;
 
             stack.Push(root);
 
-            while (stack.Count() > 0)
+            while (stack.Any())
             {
                 var vertex = stack.Pop();
 
@@ -36,12 +42,35 @@ namespace AlgonDS
 
                 visited.Add(vertex);
 
-                foreach (var v in graph.Neighbours[vertex])
+                foreach (var v in graph.Neighbors[vertex])
                 {
                     if (!visited.Contains(v))
                     {
                         stack.Push(v);
                     }
+                }
+            }
+
+            return false;
+        }
+
+        public bool SearchRecursive(Graph<int> graph, int root, int searchValue,IList<int> visited=null)
+        {
+            if (graph == null) return false;
+
+            if (!graph.Neighbors.ContainsKey(root)) return false;
+
+            if (root == searchValue) return true;
+
+            visited ??= new List<int>(); // this is only needed for bidirectional graph
+
+            visited.Add(root);
+
+            foreach (var neighbor in graph.Neighbors[root])
+            {
+                if (!visited.Contains(neighbor))
+                {
+                    return SearchRecursive(graph, neighbor, searchValue, visited);
                 }
             }
 

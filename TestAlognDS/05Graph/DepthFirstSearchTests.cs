@@ -8,6 +8,13 @@ namespace TestAlgonDS
     [TestClass]
     public class DepthFirstSearchTests
     {
+        private DepthFirstSearch _sut;
+
+        public DepthFirstSearchTests()
+        {
+            _sut = new DepthFirstSearch();
+        }
+
         [TestMethod]
         public void Search()
         {
@@ -16,7 +23,7 @@ namespace TestAlgonDS
             graph.AddVertex(2);
             graph.AddEdges(1, 2);
 
-            var actual = (new DepthFirstSearch()).Search(graph, 1, 2);
+            var actual = _sut.Search(graph, 1, 2);
 
             Assert.IsTrue(actual);
         }
@@ -29,33 +36,33 @@ namespace TestAlgonDS
             graph.AddVertex(2);
             graph.AddEdges(1, 2);
 
-            var actual = (new DepthFirstSearch()).Search(graph, 1, 1);
+            var actual = _sut.Search(graph, 1, 1);
 
             Assert.IsTrue(actual);
         }
 
         [TestMethod]
-        public void SearchNotExsists()
+        public void SearchNotExists()
         {
             var graph = new Graph<int>();
             graph.AddVertex(1);
             graph.AddVertex(2);
             graph.AddEdges(1, 2);
 
-            var actual = (new DepthFirstSearch()).Search(graph, 1, 4);
+            var actual = _sut.Search(graph, 1, 4);
 
             Assert.IsFalse(actual);
         }
 
         [TestMethod]
-        public void SearchRootNotExsists()
+        public void SearchRootNotExists()
         {
             var graph = new Graph<int>();
             graph.AddVertex(1);
             graph.AddVertex(2);
             graph.AddEdges(1, 2);
 
-            var actual = (new DepthFirstSearch()).Search(graph, 4, 2);
+            var actual = _sut.Search(graph, 4, 2);
 
             Assert.IsFalse(actual);
         }
@@ -72,10 +79,27 @@ namespace TestAlgonDS
             ,new Tuple<int,int>(8,9),new Tuple<int,int>(8,10),new Tuple<int,int>(9,10)
         });
 
-            var dfs = new DepthFirstSearch();            
-            var result = dfs.Search(graph, 1, 7);
+                    
+            var result = _sut.Search(graph, 1, 7);
 
             Assert.IsTrue(result);
+        }
+
+        [TestMethod]
+        public void RecursiveSearch()
+        {
+            var graph = new Graph<int>();
+            graph.AddVertex(new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 });
+            graph.AddEdges(new List<Tuple<int, int>>(){
+                new Tuple<int,int>(1,2),new Tuple<int,int>(1,3),new Tuple<int,int>(2,4)
+                ,new Tuple<int,int>(4,7),new Tuple<int,int>(7,5),new Tuple<int,int>(3,6)
+                ,new Tuple<int,int>(5,3),new Tuple<int,int>(5,6),new Tuple<int,int>(5,8)
+                ,new Tuple<int,int>(8,9),new Tuple<int,int>(8,10),new Tuple<int,int>(9,10)
+            });
+
+            var actual = _sut.SearchRecursive(graph, 1, 7);
+
+            Assert.IsTrue(actual);
         }
     }
 }

@@ -14,11 +14,11 @@ namespace AlgonDS
     public class Graph<T>
     {
         public Dictionary<T, HashSet<T>>
-        Neighbours = new Dictionary<T, HashSet<T>>();
+        Neighbors = new Dictionary<T, HashSet<T>>();
 
         public void AddVertex(T data)
         {
-            Neighbours.Add(data, new HashSet<T>());
+            Neighbors.Add(data, new HashSet<T>());
         }
 
         public void AddVertex(T[] data)
@@ -31,10 +31,10 @@ namespace AlgonDS
 
         public void AddEdges(T v1, T v2)
         {
-            if (Neighbours.ContainsKey(v1) && Neighbours.ContainsKey(v2))
+            if (Neighbors.ContainsKey(v1) && Neighbors.ContainsKey(v2))
             {
-                Neighbours[v1].Add(v2);
-                Neighbours[v2].Add(v1);
+                Neighbors[v1].Add(v2);
+                Neighbors[v2].Add(v1);
             }
         }
 

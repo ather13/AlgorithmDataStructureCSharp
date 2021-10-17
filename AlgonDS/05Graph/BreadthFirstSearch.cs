@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Metadata.Ecma335;
 
 /// <summary>
 /// Problem Statement : Breadth First Search (BFS) algorithm traverses a graph in a breadthward motion 
@@ -11,22 +12,28 @@ namespace AlgonDS
 {
     public class BreadthFirstSearch
     {
-        //here root is any starting point
-        //since there is no root element in graph
+        /// <summary>
+        /// here root is any starting point
+        /// since there is no root element in graph like in tree
+        /// </summary>
+        /// <param name="graph"></param>
+        /// <param name="root"></param>
+        /// <param name="searchValue"></param>
+        /// <returns></returns>
         public bool Search(Graph<int> graph, int root, int searchValue)
         {
-            var visited = new List<int>();
+            var visited = new List<int>(); // this is only needed for bidirectional graph
             var queue = new Queue<int>();
 
             if (graph == null) return false;
 
-            if (!graph.Neighbours.ContainsKey(root)) return false;
+            if (!graph.Neighbors.ContainsKey(root)) return false;
 
             if (root == searchValue) return true;
 
             queue.Enqueue(root);
 
-            while (queue.Count() > 0)
+            while (queue.Any())
             {
                 var vertex = queue.Dequeue();
                 //Debug.WriteLine(vertex);
@@ -36,7 +43,7 @@ namespace AlgonDS
 
                 visited.Add(vertex);
 
-                foreach (var v in graph.Neighbours[vertex])
+                foreach (var v in graph.Neighbors[vertex])
                 {
                     if (!visited.Contains(v))
                     {

@@ -17,9 +17,9 @@ namespace TestAlgonDS
             actual.AddVertex(2);
             actual.AddVertex(3);
 
-            Assert.IsTrue(actual.Neighbours.ContainsKey(1));
-            Assert.IsTrue(actual.Neighbours.ContainsKey(2));
-            Assert.IsTrue(actual.Neighbours.ContainsKey(3));
+            Assert.IsTrue(actual.Neighbors.ContainsKey(1));
+            Assert.IsTrue(actual.Neighbors.ContainsKey(2));
+            Assert.IsTrue(actual.Neighbors.ContainsKey(3));
         }
 
         [TestMethod]
@@ -30,8 +30,8 @@ namespace TestAlgonDS
             actual.AddVertex(2);
             actual.AddEdges(1,2);
 
-            Assert.IsTrue(actual.Neighbours[1].Contains(2));
-            Assert.IsTrue(actual.Neighbours[2].Contains(1));
+            Assert.IsTrue(actual.Neighbors[1].Contains(2));
+            Assert.IsTrue(actual.Neighbors[2].Contains(1));
         }
 
         [TestMethod]
@@ -42,7 +42,7 @@ namespace TestAlgonDS
             actual.AddVertex(2);
             actual.AddVertex(3);
 
-            Assert.IsFalse(actual.Neighbours.ContainsKey(4));
+            Assert.IsFalse(actual.Neighbors.ContainsKey(4));
         }
 
         [TestMethod]
@@ -55,8 +55,8 @@ namespace TestAlgonDS
             actual.AddEdges(1, 4); //wrong value passed
             actual.AddEdges(2, 4); //wrong value passed
 
-            Assert.IsFalse(actual.Neighbours[1].Contains(4));
-            Assert.IsFalse(actual.Neighbours[2].Contains(4));
+            Assert.IsFalse(actual.Neighbors[1].Contains(4));
+            Assert.IsFalse(actual.Neighbors[2].Contains(4));
         }
     }
 }
