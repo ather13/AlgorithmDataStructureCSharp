@@ -12,8 +12,8 @@
 4. More comments need to be added
 
 # Development Environment
-1. Visual Studio : 2017
-2. .Net Core 2.1
+1. Visual Studio : 2019
+2. .Net 5.0
 3. C# 
 
 # Performance 
