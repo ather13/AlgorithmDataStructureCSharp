@@ -5,17 +5,17 @@ using System.Collections.Generic;
 namespace TestAlgonDS._11GraphProblems
 {
     [TestClass]
-    public class ConnectedComponentCountsTests
+    public class LargestComponentCountTests
     {
-        public readonly ConnectedComponentCounts _sut;
-
-        public ConnectedComponentCountsTests()
+        private readonly LargestComponentCounts _sut;
+        
+        public LargestComponentCountTests()
         {
-            _sut = new ConnectedComponentCounts();
+            _sut = new LargestComponentCounts();
         }
 
         [TestMethod]
-        public void ShouldReturnComponentsCount()
+        public void ShouldReturnLargestComponentCount()
         {
             var graph = new Dictionary<int, int[]>()
             {
@@ -25,12 +25,12 @@ namespace TestAlgonDS._11GraphProblems
                 { 8, new int[] { 0, 5 } },
                 { 2, new int[] { 3, 4 } },
                 { 3, new int[] { 2, 4 } },
-                { 4, new int[] { 3, 2 } }
+                { 4, new int[] { 3, 2 } },
             };
 
-            var count = _sut.GetConnectedComponentCounts(graph);
+            var count = _sut.GetCount(graph);
 
-            Assert.AreEqual(3, count);
+            Assert.AreEqual(4,count);
         }
     }
 }
