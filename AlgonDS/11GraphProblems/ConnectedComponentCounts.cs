@@ -12,7 +12,7 @@ namespace AlgonDS._11GraphProblems
         public int GetConnectedComponentCounts(Dictionary<int,int[]> graph)
         {
             var visited = new HashSet<int>();
-            var count = 0;
+            var count = 1;
 
             foreach (var node in graph)
             {
