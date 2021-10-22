@@ -3,6 +3,9 @@ using System.Linq;
 
 namespace AlgonDS._11GraphProblems
 {
+    /// <summary>
+    /// BFS is easy way to find shortest path
+    /// </summary>
     public class ShortestPath
     {
         public int GetShortestPath(Dictionary<char,List<char>> graph,char start, char end)
