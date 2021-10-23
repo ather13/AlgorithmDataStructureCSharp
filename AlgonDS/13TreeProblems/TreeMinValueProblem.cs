@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using AlgonDS._12Tree;
 
@@ -8,19 +9,15 @@ namespace AlgonDS._13TreeProblems
     {
         public int GetMinValueDfsRecursive(TreeNode<int> root)
         {
-            if (root == null) return 0; //assuming there is no zero value in tree node
-
-            var minValue = root.Data;
-
+            if (root == null) return int.MaxValue; //assuming there is no zero value in tree node
+            
             var rightMinValue = GetMinValueDfsRecursive(root.Right);
-            if (rightMinValue < minValue && rightMinValue != 0)
-                minValue = rightMinValue;
 
             var leftMinValue = GetMinValueDfsRecursive(root.Left);
-            if (leftMinValue < minValue && leftMinValue != 0)
-                minValue = leftMinValue;
 
-            return minValue;
+            //return Math.Min(root.Data, Math.Min( leftMinValue, rightMinValue));
+
+            return new [] { root.Data, leftMinValue, rightMinValue }.Min();
         }
 
         public int GetMinValueDfs(TreeNode<int> root)
