@@ -15,8 +15,8 @@ namespace AlgonDS._13TreeProblems
 
             if (root.Data == searchValue) return true;
 
-            var rightNode = true;
-            var leftNode = true;
+            var rightNode = false;
+            var leftNode = false;
 
             if (root.Right != null)
                 rightNode = FindNodeUsingDfsRecursive(root.Right, searchValue);
