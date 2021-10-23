@@ -11,12 +11,8 @@ namespace AlgonDS._13TreeProblems
             if (root == null) return 0;
 
             var sum = root.Data;
-
-            if (root.Right!= null)
-                sum += SumNodesDfsRecursive(root.Right);
             
-            if (root.Left != null)
-                sum += SumNodesDfsRecursive(root.Left);
+            sum += SumNodesDfsRecursive(root.Right) + SumNodesDfsRecursive(root.Left);
 
             return sum;
         }
