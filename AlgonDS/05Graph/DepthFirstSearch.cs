@@ -62,7 +62,7 @@ namespace AlgonDS
 
             if (root == searchValue) return true;
 
-            visited ??= new List<int>(); // this is only needed for bidirectional graph
+            visited ??= new List<int>(); // visited is only needed for bidirectional graph
 
             visited.Add(root);
 

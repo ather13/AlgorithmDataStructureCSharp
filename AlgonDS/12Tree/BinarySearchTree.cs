@@ -12,14 +12,14 @@ namespace AlgonDS._12Tree
 {
     public class BinarySearchTree
     {
-        public TreeNode root;
+        public TreeNode<int> root;
 
         public void Insert(int data)
         {
 
             if (root == null)
             {
-                root = new TreeNode(data);
+                root = new TreeNode<int>(data);
                 return;
             }
 
@@ -33,7 +33,7 @@ namespace AlgonDS._12Tree
                     current = current.Left;
                     if (current == null)
                     {
-                        parent.Left = new TreeNode(data);
+                        parent.Left = new TreeNode<int>(data);
                         return;
                     }
                 }
@@ -42,7 +42,7 @@ namespace AlgonDS._12Tree
                     current = current.Right;
                     if (current == null)
                     {
-                        parent.Right = new TreeNode(data);
+                        parent.Right = new TreeNode<int>(data);
                         return;
                     }
                 }
@@ -50,7 +50,7 @@ namespace AlgonDS._12Tree
         }
 
         //LRootR
-        public void InOrder(TreeNode root)
+        public void InOrder(TreeNode<int> root)
         {
             if (root == null) return;
 
@@ -60,7 +60,7 @@ namespace AlgonDS._12Tree
         }
 
         //RootLR
-        public void PreOrder(TreeNode root)
+        public void PreOrder(TreeNode<int> root)
         {
             if (root == null) return;
 
@@ -70,7 +70,7 @@ namespace AlgonDS._12Tree
         }
 
         //RootLR
-        public void PostOrder(TreeNode root)
+        public void PostOrder(TreeNode<int> root)
         {
 
             if (root == null) return;

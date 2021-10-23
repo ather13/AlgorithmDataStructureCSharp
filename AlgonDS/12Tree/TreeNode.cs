@@ -1,12 +1,12 @@
 ﻿namespace AlgonDS._12Tree
 {    
-    public class TreeNode
+    public class TreeNode<T>
     {
-        public TreeNode Left { get; set; }
-        public TreeNode Right { get; set; }
-        public int Data { get; set; }
+        public TreeNode<T> Left { get; set; }
+        public TreeNode<T> Right { get; set; }
+        public T Data { get; set; }
 
-        public TreeNode(int data)
+        public TreeNode(T data)
         {
             this.Data = data;
         }
