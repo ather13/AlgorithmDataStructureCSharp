@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace AlgonDS
+﻿namespace AlgonDS._12Tree
 {    
     public class TreeNode
     {

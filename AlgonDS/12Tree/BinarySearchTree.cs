@@ -8,7 +8,7 @@
 ///Otherwise, search for the element in the right subtree.
 /// </summary>
 
-namespace AlgonDS
+namespace AlgonDS._12Tree
 {
     public class BinarySearchTree
     {

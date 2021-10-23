@@ -1,11 +1,8 @@
-﻿using AlgonDS;
+﻿using AlgonDS._12Tree;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace TestAlgonDS
-{    
+namespace TestAlgonDS._12Tree
+{
     [TestClass]
     public class BinarySearchTreeTests
     {
