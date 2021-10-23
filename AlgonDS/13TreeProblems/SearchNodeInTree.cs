@@ -1,9 +1,6 @@
-﻿using System;
+﻿using AlgonDS._12Tree;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using AlgonDS._12Tree;
 
 namespace AlgonDS._13TreeProblems
 {
