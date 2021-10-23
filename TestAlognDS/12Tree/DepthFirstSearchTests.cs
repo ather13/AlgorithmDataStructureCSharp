@@ -42,7 +42,7 @@ namespace TestAlgonDS._12Tree
                 'a', 'b', 'd', 'e', 'c', 'f'
             };
 
-            var result = _sut.DfsTraverse(root);
+            var result = _sut.DfsTraverse_PreOrder(root);
 
             CollectionAssert.AreEqual(expected,result);
 
