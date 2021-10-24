@@ -5,23 +5,51 @@ namespace AlgonDS._12Tree
 {
     public class DepthFirstSearchInOrder
     {
-        // work in process
-        public List<char> Traverse(TreeNode<char> root)
+        /// <summary>
+        /// 
+        /// </summary>
+        public List<char> TraverseIterative(TreeNode<char> root)
         {
             if (root == null) return new List<char>();
 
             var list = new List<char>();
             var stack = new Stack<TreeNode<char>>();
-            stack.Push(root);
-
-            while (stack.Any())
+            
+            var current = root;
+            while (current != null)
             {
-                var current = stack.Pop();
-                
-                if (current.Right != null) stack.Push(current.Right);
+                while (current.Left != null)
+                {
+                    stack.Push(current);
+                    current = current.Left;
+                }
+            
+                list.Add(current.Data);
 
-                if (current.Left != null) stack.Push(current.Left);
+                while (current.Right == null && stack.Any())
+                {
+                    current = stack.Pop();
+                    list.Add(current.Data);
+                }
+
+                current = current.Right;
             }
+            
+            return list;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public List<char> TraverseRecursively(TreeNode<char> root)
+        {
+            if (root == null) return new List<char>();
+
+            var list = new List<char>();
+            
+            list.AddRange(TraverseRecursively(root.Left));
+            list.Add(root.Data);
+            list.AddRange(TraverseRecursively(root.Right));
 
             return list;
         }

@@ -8,8 +8,6 @@ namespace AlgonDS._12Tree
         /// <summary>
         /// DFS Traversal - PreOrder using Iterative : Root-Left-Right
         /// </summary>
-        /// <param name="root"></param>
-        /// <returns></returns>
         public List<char> DfsTraverse_PreOrder(TreeNode<char> root)
         {
             if (root == null) return new List<char>();
@@ -36,8 +34,6 @@ namespace AlgonDS._12Tree
         /// <summary>
         /// DFS Traversal - PreOrder using Recursive : Root-Left-Right
         /// </summary>
-        /// <param name="root"></param>
-        /// <returns></returns>
         public List<char> DfsTraverseRecursive_PreOrder(TreeNode<char> root)
         {
             if (root == null) return new List<char>();

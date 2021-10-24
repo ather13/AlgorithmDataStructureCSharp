@@ -1,7 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
+﻿/*
+ * Node for Singly LinkedList
+ */
 namespace AlgonDS
 {
     public class Node
