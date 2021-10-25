@@ -21,7 +21,7 @@ namespace AlgonDS._12Tree
             {
                 var current = stack.Pop();
 
-                list.Add(current.Data);
+                list.Add(current.Data); 
 
                 if (current.Right != null) stack.Push(current.Right);
 

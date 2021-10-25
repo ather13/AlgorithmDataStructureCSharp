@@ -6,6 +6,11 @@
         public TreeNode<T> Right { get; set; }
         public T Data { get; set; }
 
+        public TreeNode()
+        {
+            
+        }
+
         public TreeNode(T data)
         {
             this.Data = data;

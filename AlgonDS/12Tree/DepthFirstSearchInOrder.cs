@@ -18,21 +18,21 @@ namespace AlgonDS._12Tree
             var current = root;
             while (current != null)
             {
-                while (current.Left != null)
+                while (current.Left != null)    // a, b //null
                 {
                     stack.Push(current);
                     current = current.Left;
                 }
             
-                list.Add(current.Data);
+                list.Add(current.Data); // d //e //c //f
 
                 while (current.Right == null && stack.Any())
                 {
-                    current = stack.Pop();
-                    list.Add(current.Data);
+                    current = stack.Pop();  // b // a
+                    list.Add(current.Data); //b // a
                 }
 
-                current = current.Right;
+                current = current.Right; //e //c //f
             }
             
             return list;
