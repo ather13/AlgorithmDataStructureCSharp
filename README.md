@@ -1,6 +1,14 @@
 # About "AlgorithmDataStructureCSharp" code base
 
 1. Algorithms and Data Structures 
+	DataStructures:
+	- Array
+	- Strings
+	- Stack
+	- Queue
+	- Tree
+	- Graph
+
 3. Other common problems solved
 4. Multiple method to solve the same problem
 5. Unit Testing
