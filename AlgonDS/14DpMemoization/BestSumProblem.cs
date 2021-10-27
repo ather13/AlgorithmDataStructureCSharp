@@ -11,8 +11,9 @@ namespace AlgonDS._14DpMemoization
     {
         /// <summary>
         /// Brute Force - Recursive
-        /// Space : 
-        /// Time  : 
+        /// Space : O(m * m) = O(m^2)
+        /// Time  : O(n^m * m)
+        /// m = target sum, n = length of numbers array
         /// </summary>
         public int[] GetBestSum(int sum, int[] numbers)
         {
@@ -40,8 +41,9 @@ namespace AlgonDS._14DpMemoization
 
         /// <summary>
         /// Recursive with Memoization
-        /// Space : 
-        /// Time  : 
+        /// Space : O(m * m) = O(m^2)
+        /// Time  : O(n * m^2)
+        /// m = target sum, n = length of numbers array
         /// </summary>
         public int[] GetBestSumMemo(int sum, int[] numbers,Dictionary<int,int[]> memo=null)
         {

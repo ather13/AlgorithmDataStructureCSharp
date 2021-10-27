@@ -33,6 +33,7 @@ namespace AlgonDS._14DpMemoization
         /// Brute force - Recursive
         /// Space : O(n^m) - exponential
         /// Time  : O(m)
+        /// m = target sum, n = length of numbers array
         /// </summary>
         public bool CanSumRecursive(int sum, int[] numbers)
         {
@@ -54,6 +55,7 @@ namespace AlgonDS._14DpMemoization
         /// Recursive with Memoization
         /// Space : O(m * n)
         /// Time  : O(m)
+        /// m = target sum, n = length of numbers array
         /// </summary>
         public bool CanSumRecursiveMemo(int sum, int[] numbers, Dictionary<int, bool> memo=null)
         {

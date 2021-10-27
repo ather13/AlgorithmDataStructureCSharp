@@ -11,35 +11,37 @@ namespace AlgonDS._14DpMemoization
     {
         /// <summary>
         /// Recursive with Memoization
-        /// Space : 
-        /// Time  : 
+        /// Space : O(m)
+        /// Time  : O(n^m * m)
+        /// m = target sum, n = length of numbers array
         /// </summary>
-        public int[] GetHowSumMemo(int Sum, int[] numbers,Dictionary<int,int[]> memo=null)
+        public int[] GetHowSumMemo(int sum, int[] numbers,Dictionary<int,int[]> memo=null)
         {
             memo ??= new Dictionary<int, int[]>();
-            if (memo.ContainsKey(Sum)) return memo[Sum];
-            if (Sum == 0) return Array.Empty<int>();
-            if (Sum < 0) return null;
+            if (memo.ContainsKey(sum)) return memo[sum];
+            if (sum == 0) return Array.Empty<int>();
+            if (sum < 0) return null;
 
             foreach (var num in numbers)
             {
-                var newSum = Sum - num;
+                var newSum = sum - num;
                 var result = GetHowSumMemo(newSum, numbers,memo);
                 if (result != null)
                 {
-                    memo.Add(Sum, result.Append(num).ToArray());
-                    return memo[Sum];
+                    memo.Add(sum, result.Append(num).ToArray());
+                    return memo[sum];
                 }
             }
 
-            memo.Add(Sum, null);
+            memo.Add(sum, null);
             return null;
         }
 
         /// <summary>
         /// Brute Force - Recursive
-        /// Space : 
-        /// Time  : 
+        /// Space : O(m * m) = O(m^2)
+        /// Time  : O(m * m^2)
+        /// m = target sum, n = length of numbers array
         /// </summary>
         public int[] GetHowSum(int sum, int[] numbers)
         {
