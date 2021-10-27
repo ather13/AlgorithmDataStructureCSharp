@@ -2,6 +2,9 @@
 
 namespace AlgonDS._14DpMemoization
 {
+    /// <summary>
+    /// Decision Problem
+    /// </summary>
     public class CanSumProblem
     {
         /// <summary>

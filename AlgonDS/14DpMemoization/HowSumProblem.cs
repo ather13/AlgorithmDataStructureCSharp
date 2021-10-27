@@ -4,8 +4,16 @@ using System.Linq;
 
 namespace AlgonDS._14DpMemoization
 {
+    /// <summary>
+    /// Combinatorics problems
+    /// </summary>
     public class HowSumProblem
     {
+        /// <summary>
+        /// Recursive with Memoization
+        /// Space : 
+        /// Time  : 
+        /// </summary>
         public int[] GetHowSumMemo(int Sum, int[] numbers,Dictionary<int,int[]> memo=null)
         {
             memo ??= new Dictionary<int, int[]>();
@@ -28,6 +36,11 @@ namespace AlgonDS._14DpMemoization
             return null;
         }
 
+        /// <summary>
+        /// Brute Force - Recursive
+        /// Space : 
+        /// Time  : 
+        /// </summary>
         public int[] GetHowSum(int sum, int[] numbers)
         {
             if (sum == 0) return Array.Empty<int>();
