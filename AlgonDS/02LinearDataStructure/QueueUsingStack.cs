@@ -1,7 +1,8 @@
 ﻿
 namespace AlgonDS._02LinearDataStructure
 {
-    class QueueUsingStack
+    public class QueueUsingStack
     {
+        
     }
 }

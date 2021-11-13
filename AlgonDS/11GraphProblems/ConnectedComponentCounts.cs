@@ -16,7 +16,7 @@ namespace AlgonDS._11GraphProblems
 
             foreach (var node in graph)
             {
-                if (explore(graph, node.Key, visited))
+                if (Explore(graph, node.Key, visited))
                 {
                     count++;
                 }
@@ -25,7 +25,7 @@ namespace AlgonDS._11GraphProblems
             return count;
         }
 
-        private bool explore(Dictionary<int, int[]> graph, int node,HashSet<int> visited)
+        private bool Explore(IReadOnlyDictionary<int, int[]> graph, int node,ISet<int> visited)
         {
             if (visited.Contains(node)) return false;
 
@@ -33,7 +33,7 @@ namespace AlgonDS._11GraphProblems
 
             foreach (var neighbor in graph[node])
             {
-                explore(graph, neighbor, visited);
+                Explore(graph, neighbor, visited);
             }
 
             return true;
